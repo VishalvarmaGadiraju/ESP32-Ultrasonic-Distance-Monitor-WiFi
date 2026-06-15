@@ -45,7 +45,7 @@ This project uses an **ESP32** and an **HC-SR04 Ultrasonic Sensor** to measure d
 
 ## 🌐 Web Interface
 
-![Output](images/output.jpg)
+![Output](images/output.jpeg)
 
 ---
 
