@@ -90,22 +90,22 @@ void handleSensor()
 
  digitalWrite(TRG_pin,LOW);
 
- duration = pulseIn(ECHO_pin,HIGH);//pulse in stores the amount of time for which echopin was high i.e signal read time from obstacle
- distance = (duration * 0.034) / 2;// speed of sound in cm/us = 0.034
+ duration = pulseIn(ECHO_pin,HIGH);
+ distance = (duration * 0.034) / 2;
 
 
- String reading = "distance:"+ String(distance);// using this string for changing int it is called concatenation
+ String reading = "distance:"+ String(distance);
 
  server.send(200,"text/plain",reading);
 }
 void setup() {
-  // put your setup code here, to run once:
+  
  Serial.begin(115200);
  pinMode(TRG_pin,OUTPUT);
  pinMode(ECHO_pin,INPUT);
  digitalWrite(TRG_pin,LOW);
 
-    // Start Wi-Fi Access Point
+    
     WiFi.softAP(ssid, password);
     Serial.print("IP adress:");
     Serial.println(WiFi.softAPIP());
@@ -116,7 +116,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-server.handleClient();//handleclient is for starting the html code which is sent
+  
+server.handleClient();
 
 }
